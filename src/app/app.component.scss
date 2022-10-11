@@ -1,0 +1,14 @@
+$menu-with: 20%;
+
+.box-app {
+    display: flex;
+    height: 100%;
+    &__menu {
+        width: $menu-with;
+        background: #36454f
+    }
+    &__main {
+        width: 100%-$menu-with;
+      
+    }
+}
