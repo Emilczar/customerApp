@@ -7,10 +7,12 @@ import { CustomerItemComponent } from './components/customer-item/customer-item.
 import { CustomerDataService } from './service/customer-data.service';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
+import { CustomerEditComponent } from './components/customer-edit/customer-edit.component';
+import { CustomerListComponent } from './components/customer-list/customer-list.component';
 
 
 @NgModule({
-  declarations: [CustomerComponent, CustomerItemComponent],
+  declarations: [CustomerComponent, CustomerItemComponent, CustomerEditComponent, CustomerListComponent],
   imports: [
     FeatureRoutingModule,
     CommonModule,

@@ -1,21 +1,19 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CustomerComponent } from './customer/customer.component';
+import { CustomerEditComponent } from './components/customer-edit/customer-edit.component';
+import { CustomerListComponent } from './components/customer-list/customer-list.component';
 
 
 const routes: Routes = [
-    { path: '', component: CustomerComponent },
 
+    { path: '', component: CustomerListComponent },
+    { path: ':id', component: CustomerEditComponent },
 
-    //{ path: 'path/:routeParam', component: MyComponent },
-    //{ path: 'staticPath', component: ... },
-    //{ path: '**', component: ... },
-    //{ path: 'oldPath', redirectTo: '/staticPath' },
-    //{ path: ..., component: ..., data: { message: 'Custom' }
 ];
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class FeatureRoutingModule {}
+export class FeatureRoutingModule { }
