@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router'; import { find, map } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { map } from 'rxjs';
 import { CustomerDataService } from '../../service/customer-data.service';
-
+import { Location } from '@angular/common'
 
 @Component({
     selector: 'app-customer-edit',
@@ -14,7 +15,7 @@ export class CustomerEditComponent implements OnInit {
     form: FormGroup;
     id: number = 0;
     isAddMode = true;
-    constructor(private fb: FormBuilder, private route: ActivatedRoute, private customerData: CustomerDataService) {
+    constructor(private fb: FormBuilder, private route: ActivatedRoute, private customerData: CustomerDataService, private location: Location) {
         this.form = this.fb.group({
             name: ['', Validators.required],
             surname: ['', Validators.required]
@@ -31,7 +32,6 @@ export class CustomerEditComponent implements OnInit {
                 if (data) {
                     this.form.patchValue(data)
                 }
-
             })
 
 
@@ -45,7 +45,7 @@ export class CustomerEditComponent implements OnInit {
         } else {
             this.updateUser();
         }
-
+        this.location.back();
     }
 
     addUser() {

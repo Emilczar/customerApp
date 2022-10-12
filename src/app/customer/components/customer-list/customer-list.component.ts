@@ -27,7 +27,6 @@ export class CustomerListComponent implements OnInit {
       custumer.name = data.name;
       custumer.surname = data.surname;
      }
-  
     }))
 
 
