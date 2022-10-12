@@ -9,6 +9,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { CustomerEditComponent } from './components/customer-edit/customer-edit.component';
 import { CustomerListComponent } from './components/customer-list/customer-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @NgModule({
@@ -17,8 +19,9 @@ import { CustomerListComponent } from './components/customer-list/customer-list.
     FeatureRoutingModule,
     CommonModule,
     MatListModule,
-    MatButtonModule
-  ],
-  providers: [CustomerDataService]
+    MatButtonModule,
+    MatFormFieldModule,
+    ReactiveFormsModule
+  ]
 })
 export class CustomerModule { }

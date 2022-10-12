@@ -1,5 +1,5 @@
-<button [disabled]="isDisabled" class="btn-edit" mat-flat-button (click)="onEdit()" >Edytuj</button>
-
+<button [disabled]="isDisabled" class="btn-box" mat-flat-button (click)="onEdit()" >Edytuj</button>
+<button  class="btn-box btn-box--add" mat-flat-button (click)="onAdd()" >Dodaj</button>
 <mat-selection-list #customerSelect [multiple]="false">
     <mat-list-option  *ngFor="let customer of customers" [value]="customer" (click)="onSelect(customer)">
         <app-customer-item [customerValue]="customer"></app-customer-item>

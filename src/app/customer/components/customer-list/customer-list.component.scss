@@ -1,5 +1,9 @@
-.btn-edit {
+.btn-box {
     margin: 10px;
     color: white;
     background-color: orange;
+
+    &--add {
+        background-color: green;
+    }
 }

@@ -1,1 +1,15 @@
-Edycja 
+<div class="form-box">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <label for="name">Imię: </label>
+        <input id="name" type="text" formControlName="name" required>
+      
+        <label for="surname">Nazwisko: </label>
+        <input id="surname" type="text" formControlName="surname">
+      
+        <button class="btn" type="submit" mat-flat-button [disabled]="!form.valid">Zapisz</button>
+      </form>
+</div>
+
+
+
+ 

@@ -15,8 +15,5 @@ export class CustomerItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClick(customer: Customer) {
-     console.log(customer)
-  }
 
 }
