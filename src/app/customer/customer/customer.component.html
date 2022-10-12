@@ -1,1 +1,10 @@
-<p>customer works!</p>
+
+<button [disabled]="isDisabled" class="btn-edit" mat-flat-button (click)="onEdit()" >Edytuj</button>
+
+<mat-selection-list #customerSelect [multiple]="false">
+    <mat-list-option  *ngFor="let customer of customers" [value]="customer" (click)="onSelect(customer)">
+        <app-customer-item [customerValue]="customer"></app-customer-item>
+      </mat-list-option>
+    
+  </mat-selection-list>
+

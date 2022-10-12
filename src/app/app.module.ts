@@ -9,6 +9,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { PageNotFoundComponent } from './404/pagenotfound.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,7 @@ import { PageNotFoundComponent } from './404/pagenotfound.component';
     AppRoutingModule,
     HttpClientModule,
     NoopAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
